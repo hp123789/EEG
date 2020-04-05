@@ -9,7 +9,7 @@ t_end = time.time() + 7
 
 inlet = StreamInlet(streams[0])
 
-while time.time() < t_end:
+while 1:
     sample, timestamp = inlet.pull_sample()
     if sample:
         data.append(sample)
