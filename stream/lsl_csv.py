@@ -1,3 +1,8 @@
+#saves the data in the format of each channel separated by a comma per line.
+#The data is saved in 5 second chunks and every two chunks have a third overlapping them. 
+#File name is ite#.csv where # increases starting at 1 as the files increase. 
+#Files saved in directory in downloads with date as name.
+
 import os
 from datetime import datetime
 import time
@@ -29,13 +34,13 @@ while 1:
         readd = str(sample)[1:-1]
         data.append(readd)
 
-    def create_file():  # create new txt file with time as name
+    def create_file():  # create new csv file with time as name
         with open("ite" + str(cnt) + ".csv", "w") as file:
             file.write("")
-    fileName = "ite" + str(cnt) + ".csv"  # get file name of txt file
+    fileName = "ite" + str(cnt) + ".csv"  # get file name of csv file
     create_file()  # create txt file
     filepath = os.path.join(path, fileName)  # add txt file to directory that was created
-    file1 = open(filepath, "w")  # open txt file
+    file1 = open(filepath, "w")  # open csv file
 
     with open(filepath, 'w') as f:
         for item in data:
@@ -52,13 +57,13 @@ while 1:
         readd = str(sample)[1:-1]
         data.append(readd)
 
-    def create_file():  # create new txt file with time as name
+    def create_file():  # create new csv file with time as name
         with open("ite" + str(cnt+2) + ".csv", "w") as file:
             file.write("")
-    fileName = "ite" + str(cnt+2) + ".csv"  # get file name of txt file
+    fileName = "ite" + str(cnt+2) + ".csv"  # get file name of csv file
     create_file()  # create txt file
-    filepath = os.path.join(path, fileName)  # add txt file to directory that was created
-    file1 = open(filepath, "w")  # open txt file
+    filepath = os.path.join(path, fileName)  # add csv file to directory that was created
+    file1 = open(filepath, "w")  # open csv file
 
     with open(filepath, 'w') as f:
         for item in data:
@@ -69,13 +74,13 @@ while 1:
 
     lst2 = lst1[int((len(lst1)/2)):len(lst1)] + lst3[0:int((len(lst3)/2))]
 
-    def create_file():  # create new txt file with time as name
+    def create_file():  # create new csv file with time as name
         with open("ite" + str(cnt+1) + ".csv", "w") as file:
             file.write("")
-    fileName = "ite" + str(cnt+1) + ".csv"  # get file name of txt file
+    fileName = "ite" + str(cnt+1) + ".csv"  # get file name of csv file
     create_file()  # create txt file
-    filepath = os.path.join(path, fileName)  # add txt file to directory that was created
-    file1 = open(filepath, "w")  # open txt file
+    filepath = os.path.join(path, fileName)  # add csv file to directory that was created
+    file1 = open(filepath, "w")  # open csv file
 
     with open(filepath, 'w') as f:
         for item in lst2:
