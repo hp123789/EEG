@@ -17,4 +17,4 @@ def lsl_streamers(sample):
 
 board = OpenBCICyton()
 
-board.start_stream(lsl_streamers)
+board.start_stream(lsl_streamers) #begins the lsl stream
